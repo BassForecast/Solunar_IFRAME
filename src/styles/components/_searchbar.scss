@@ -1,0 +1,103 @@
+.searchbar__input{
+    border-radius: 64.5px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(128, 148, 170, .2);
+    height: 100%;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: #454f5b;
+
+    position: absolute;
+    padding-left: 40px;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.searchbar{
+    padding-top: 35px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.searchbar__form{
+    height: 38px;
+    position: relative;
+
+    img{
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 13px;
+    }
+}
+
+.searchbar__dropdown-container{
+    position: relative;
+}
+
+.searchbar__dropdown{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    display: block;
+    z-index: 3;
+    border-radius: 10px;
+    visibility: hidden;
+    padding-left: 0px;
+}
+
+.searchbar__dropdown-option{
+
+    font-size: 12px;
+    font-weight: 500;
+    color: #454f5b;
+    border-bottom: 1px solid rgba(69, 79, 91, .1);
+
+    padding: 10px 16px;
+    cursor: pointer;
+    overflow: scroll;
+
+    &.last{
+        border-bottom: 0;
+    }
+
+    &:hover{
+        color: #7fccf1;
+    }
+
+    &.active{
+        color: #7fccf1;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1300px and up) */
+@media only screen and (min-width: 1300px) {
+    .searchbar{
+        padding-top: 50px;
+    }
+
+    .searchbar__form{
+        height: 44px;
+        img{
+            width: 15px;
+            height: 15px;
+            margin-top: 15px;
+        }
+    }
+}
+
+/* ipad Pro potrait mode */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1024px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .searchbar__col{
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+}

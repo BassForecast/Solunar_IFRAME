@@ -1,0 +1,32 @@
+.modal__header{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 1rem;
+
+    .close{
+        padding: 0 0.5rem;
+    }
+}
+
+.modal__body{
+    margin: auto;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+
+    .message{
+        font-weight: bold;
+        font-size: 16px;
+        margin: 30px 0;
+
+        &.BFR{
+            color: $bootstrap-warning;
+        }
+
+        &.Blocker{
+            color: $bootstrap-danger;
+        }
+    }
+}
+

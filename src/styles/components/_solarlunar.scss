@@ -1,0 +1,149 @@
+.solarlunar__row{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 29px;
+    z-index: 2;
+}
+
+.solarlunar__container{
+
+    display: flex;
+    justify-content: center;
+
+    .sun{
+        margin-bottom: 10px;
+    }
+    
+    .sun,.moon{
+        flex: 0 0 80%;
+        display: flex;
+        justify-content: center;
+        
+        div{
+            text-align: center;
+            float: left;
+    
+            &.sunrise, &.sunset, &.moonrise, &.moonset{
+                height: 26px;
+                width: 26px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+                border-radius: 50%;
+            }
+    
+            &.time{
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.45;
+                letter-spacing: normal;
+                color: #454f5b;
+                margin: 4px 24px 0 12px;
+                text-transform: uppercase;
+                min-width: 51.38px;
+    
+                &.last{
+                    margin-right: 0px;
+                }
+            }
+    
+            img{
+                width: 14px;
+                height: 14px;  
+            }
+        }
+    }
+
+    .sunrise{
+        background-color: #ffc657;
+        position: relative;
+        img{
+            margin-bottom: 3px;
+        }
+    }
+    .sunset{
+        background-color: #b88114;
+    }
+    .moonrise{
+        background-color: #bbcfe7;
+    }
+    .moonset{
+        background-color: #8094aa;
+    }
+
+    .sunrise, .sunset, .moonrise, .moonset{
+        position: relative;
+        span{
+            visibility: hidden;
+            width: 80px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            font-size: 10px;
+
+            position: absolute;
+            z-index: 1;
+            
+            top: 100%;
+            left: 50%; 
+            margin-left: -40px;
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent transparent #555 transparent;
+            }
+        }
+
+        &:hover{
+            span{
+                visibility: visible;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and ( min-width: 768px ) {
+    .solarlunar__container{
+        .sun,.moon{
+            flex: 0 0 30%;
+        }
+        .sun{
+            margin-bottom: unset;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and ( min-width: 992px ) {
+    .solarlunar__container{
+        .sun,.moon{
+            flex: 0 0 22%;
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1300px and up) */
+@media only screen and (min-width: 1300px) {
+    .solarlunar__row{
+        margin-top: 34px;
+    }
+    
+    .solarlunar__container{
+        .sunrise, .sunset, .moonrise, .moonset{
+            position: relative;
+            span{
+                font-size: 12px;
+            }
+        }
+    }
+}
