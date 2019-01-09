@@ -7,7 +7,7 @@
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "clean": "rm -rf node_modules public/bundle.js public/main.css public/vendor.bundle.js public/vendor.css && npm install",
-    "deploy-ftp": "node ftp.js",
+    "deploy-ftp": "node deploy.js",
     "deploy:dev": "npm run clean && npm run build:dev && npm run deploy-ftp",
     "deploy:prod": "npm run clean && npm run build:prod && npm run deploy-ftp"
   },

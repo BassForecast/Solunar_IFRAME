@@ -1,5 +1,5 @@
 import React from "react";
-import LogoImage from "../images/logo.jpg";
+import LogoImage from "../../public/images/logo.jpg";
 
 class Header extends React.Component {
 
