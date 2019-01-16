@@ -54,9 +54,9 @@ export const fetchBFR = (postalCode, locationKey, stationCode) => {
     return axios({
       method: "get",
       params: {
-        postalCode: postalCode ? parseInt(postalCode) : null,
+        postalCode: postalCode ? parseInt(postalCode) : JSON.stringify(""),
         locationKey: parseInt(locationKey),
-        stationCode: stationCode
+        stationCode: stationCode ? stationCode : JSON.stringify("")
       },
       headers: {
         "x-api-key": BFR_API_KEY,
