@@ -54,7 +54,7 @@ export const fetchBFR = (postalCode, locationKey, stationCode) => {
     return axios({
       method: "get",
       params: {
-        postalCode: postalCode ? parseInt(postalCode) : JSON.stringify(""),
+        postalCode: postalCode && postalCode.indexOf(' ') < 0 ? postalCode : JSON.stringify(""), //Countries like UK have spaces in them. We need to set an empty string for even that case.
         locationKey: parseInt(locationKey),
         stationCode: stationCode ? stationCode : JSON.stringify("")
       },
