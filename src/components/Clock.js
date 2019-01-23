@@ -308,7 +308,6 @@ class ClockComponent extends React.Component {
         }
     }
 
-    // TODO: Replace app hyperlinks with appflyer urls
     render(){
         return (
             <div className="col-11 col-md-6 col-lg-3 clock__col">   
@@ -317,7 +316,7 @@ class ClockComponent extends React.Component {
                     <a
                         style={{display: this.props.isToday ? "none" : "block"}}
                         className="app__hyperlink appstore"
-                        href="https://itunes.apple.com/us/app/bassforecast/id1088297101" 
+                        href="https://bassforecast.onelink.me/5aRm/BassForecastSolunarPageIOS" 
                         target="_blank"
                     >
                         <img
@@ -328,7 +327,7 @@ class ClockComponent extends React.Component {
                     <a
                         style={{ display: this.props.isToday ? "none" : "block"}}
                         className="app__hyperlink playstore"
-                        href="https://play.google.com/store/apps/details?id=com.bassforecast.android" 
+                        href="https://bassforecast.onelink.me/5aRm/BassForecastSolunarPageANDROID" 
                         target="_blank"
                     >
                         <img
