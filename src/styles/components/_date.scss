@@ -1,0 +1,107 @@
+.date{
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 0 6px;
+    float: left;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #3aade3;
+        color: #ffffff;
+        .date__day, .date__date{
+            color: #ffffff;
+        }
+        .date__date{
+            font-weight: 600;
+        }
+        box-shadow: 0 4px 10px 0 rgba(224, 224, 224, 0.8);
+    }
+
+    &.active{
+        background-color: #3aade3;
+        .date__day, .date__date{
+            color: #ffffff;
+        }
+        .date__date{
+            font-weight: 600;
+        }
+        box-shadow: 0 4px 10px 0 rgba(224, 224, 224, 0.8);
+    }
+}
+
+.date__strip{
+    height: 44px;
+    margin-top: 20.30px;
+    margin-bottom: 25.40px;
+    display: flex;
+    justify-content: center;
+}
+
+.date__day{
+    font-size: 8px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+    color: #8094aa;
+    &.month{
+        color: #3aade3;
+    }
+}
+
+.date__date{
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #454f5b;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and ( min-width: 768px ) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and ( min-width: 992px ) {
+
+}  
+/* Extra large devices (large laptops and desktops, 1300px and up) */
+/* ipad Pro potrait mode */
+@media only screen and (min-width: 1300px), only screen 
+and (min-width: 1024px) 
+and (max-width: 1024px)
+and (orientation: portrait) 
+and (-webkit-min-device-pixel-ratio: 2){
+    .date{
+        width: 56px;
+        height: 56px;
+        margin: 0 6px;
+    }
+
+    .date__strip{
+        height: 56px;
+        margin-top: 24px;
+        margin-bottom: 30px;
+    }
+
+    .date__day{
+        padding-top: 11px;
+        font-size: 10px;
+    }
+
+    .date__date{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "bass-forecast",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "dev-server": "webpack-dev-server",
+    "clean": "rm -rf node_modules public/bundle.js public/main.css public/vendor.bundle.js public/vendor.css && npm install",
+    "deploy-ftp": "node deploy.js",
+    "deploy:dev": "npm run clean && npm run build:dev && npm run deploy-ftp",
+    "deploy:prod": "npm run clean && npm run build:prod && npm run deploy-ftp"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.5",
+    "css-loader": "^0.28.10",
+    "dotenv": "^5.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "ftp-deploy": "^2.3.0",
+    "live-server": "^1.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.7.2",
+    "normalize.css": "^8.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.27.1",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "3.1.1"
+  }
+}

@@ -1,0 +1,14 @@
+# compiled output
+public/*
+!public/images
+!public/index.html
+
+# IDE - VSCode
+.vscode/*
+
+# Dependency directories
+node_modules/
+
+# System Files
+.DS_Store
+Thumbs.db

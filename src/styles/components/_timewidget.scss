@@ -1,0 +1,198 @@
+.widget{
+    flex: 0 0 90%;
+}
+
+.widget__container{
+    border-radius: 14px;
+    box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+}
+
+.widget__heading{
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.widget__ruler{
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    margin-top: 12px;
+}
+
+.major{
+    &.widget__ruler{
+        background-color: #43ebd0;
+    }
+    
+    &.widget__heading{
+        color: #43ebd0;
+    }
+}
+
+.minor{
+    &.widget__ruler{
+        background-color: #f1c356;
+    }
+    
+    &.widget__heading{
+        color: #f1c356;
+    }
+}
+
+.widget__time-box{
+    height: 66px;
+    border-radius: 10px;
+    border: 1px solid #8094aa3d;
+    justify-content: center;
+    display: flex;
+    padding: 10px 0;
+    width: 48%;
+}
+
+.widget__time-row{
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 20px;
+}
+
+.widget__time{
+    float: left;
+    text-align: center;
+    margin: 6px 2px;
+
+    &.ruler{
+        width: 24px;
+        height: 1px;
+        background-color: #8094aa;
+        margin: 22px 8px;
+        opacity: 0.2;
+    }
+
+    .time{
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color:#454f5b;
+        margin-bottom: 3px;
+    }
+
+    .text{
+        opacity: 0.6;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #8094aa;
+        margin-top: 1px;
+        text-transform: uppercase;
+    }
+}
+
+.widget__divider{
+    height: 26px;
+}
+
+.moonphase__container{
+    position: relative;
+    margin-top: 22px;
+    .moonphase__bg{
+        width: 100%;
+    }
+    .moonphase__content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: white;
+        //padding: 35px 30px;
+        padding: 5%;
+        font-size: 12px;
+
+        .heading{
+            margin-bottom: 1%;
+        }
+
+        .moonphase__rating{
+            
+            margin-right: 0;
+            margin-left: 0;
+            margin-top: 5%;
+
+            .moonphase__img-container{
+                flex: 0 0 15%;
+                margin-top: 1%;
+            }
+            img{
+                width: 100%;
+                float: left;
+            }
+            .moonphase__rating-content{
+                float: left;
+                padding-left: 10px;
+                flex: 0 0 60%;
+
+                .percentage{
+                    font-size: 18px;
+                    margin-bottom: 2%;
+                }
+
+                .text{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and ( min-width: 768px ) {
+    .widget{
+        flex: 0 0 50%;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and ( min-width: 992px ) {
+    .widget{
+        flex: 0 0 25%;
+    }
+
+    .moonphase__rating-content{
+        .percentage{
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+/* ipad Pro potrait mode */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1024px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .widget{
+        flex: 0 0 50%;
+    }
+
+    .moonphase__rating-content{
+        padding-top: 2%;
+        .percentage{
+            margin-bottom: 2% !important;
+        }
+
+        .text{
+            font-size: 14px;
+        }
+    }
+}
