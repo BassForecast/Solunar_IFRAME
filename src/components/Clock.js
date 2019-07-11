@@ -10,7 +10,6 @@ class ClockComponent extends React.Component {
     }
 
     componentDidMount() {
-
         this.updateOverlayHeight();
         window.addEventListener("resize", this.updateOverlayHeight.bind(this));
 
@@ -316,7 +315,7 @@ class ClockComponent extends React.Component {
                     <a
                         style={{display: this.props.isToday ? "none" : "block"}}
                         className="app__hyperlink appstore"
-                        href="https://bassforecast.onelink.me/5aRm/BassForecastSolunarPageIOS" 
+                        href="https://bassforecast.onelink.me/5aRm/e6e64dde" 
                         target="_blank"
                     >
                         <img
@@ -327,7 +326,7 @@ class ClockComponent extends React.Component {
                     <a
                         style={{ display: this.props.isToday ? "none" : "block"}}
                         className="app__hyperlink playstore"
-                        href="https://bassforecast.onelink.me/5aRm/BassForecastSolunarPageANDROID" 
+                        href="https://bassforecast.onelink.me/5aRm/e6e64dde" 
                         target="_blank"
                     >
                         <img

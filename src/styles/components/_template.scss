@@ -11,7 +11,7 @@
     max-width: 1440px;
     position: relative;
     margin: auto;
-    overflow: scroll;
+    overflow: none;
 }
   
 .App-link {
@@ -27,7 +27,7 @@
         width: 300px;
         height: 50px;
     }
-
+    
     #displayAdVertical{
         width: 120px;
         height: 600px;

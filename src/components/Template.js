@@ -28,6 +28,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
     const today = new Date();
     let dateSet = [];
     
@@ -62,7 +63,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header/>
         <ErrorModal 
           errorModal={this.props.errorModal}
           onClick={this.closeErrorModal}
@@ -105,6 +105,17 @@ class App extends React.Component {
             
             <div className="row justify-content-center display__ad-row">
               <div id="displayAdHorizontal">
+                <a href="https://bassforecast.onelink.me/5aRm/Wired2FishIFrame"
+                  target="_blank" >
+                  <img
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }}
+                    src="images/HorizontalBanner/h_0282_Bassforecast_MobileAd3_728x90.jpg">
+                  </img>
+                </a>
+                
               </div>
             </div>
             
