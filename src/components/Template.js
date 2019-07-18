@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import queryString from 'query-string';
 import Clock from './Clock';
 import FeedingTimeWidget from './FeedingTimeWidget';
 import MoonPhaseWidget from './MoonPhaseWidget';
@@ -42,6 +44,9 @@ class App extends React.Component {
       activeDates : dateSet
     });
 
+    this.params = queryString.parse(this.props.location.search);
+    this.adsAppFlyerLink = "https://bassforecast.onelink.me/5aRm/" + this.params['ads'];
+
     this.props.dispatch(fetchSelectedCityInfo(this.props.currentCity.key, this.state.selectedDate));
     this.props.dispatch(setCurrentMoonPhase(this.state.selectedDate));
   }
@@ -68,6 +73,7 @@ class App extends React.Component {
           onClick={this.closeErrorModal}
         />
         <div className="app__container" id="bg-container">
+        
             <SearchBar selectedDate={this.state.selectedDate}/>
 
             <div className="date__strip-container mx-auto">
@@ -105,7 +111,7 @@ class App extends React.Component {
             
             <div className="row justify-content-center display__ad-row">
               <div id="displayAdHorizontal">
-                <a href="https://bassforecast.onelink.me/5aRm/Wired2FishIFrame"
+                <a href={this.adsAppFlyerLink}
                   target="_blank" >
                   <img
                     style={{
@@ -179,4 +185,4 @@ const mapStateToProps = ( store ) => {
   }
 }
 
-export default connect(mapStateToProps)( App );
+export default connect(mapStateToProps)(withRouter( App ));

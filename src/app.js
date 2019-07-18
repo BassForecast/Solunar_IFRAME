@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import BassForecastApp from "./components/Template";
 import configureStore from "./store/configureStore";
@@ -11,7 +12,10 @@ const store = configureStore();
 
 ReactDOM.render(
     <Provider store = { store } >
+        <BrowserRouter>
         <BassForecastApp/>
+        </BrowserRouter>
+        
     </Provider>, 
     document.getElementById( "root" ) 
 );

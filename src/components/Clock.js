@@ -1,4 +1,6 @@
 import React from "react";
+import { withRouter } from 'react-router-dom';
+import queryString from 'query-string';
 
 class ClockComponent extends React.Component {
 
@@ -19,6 +21,10 @@ class ClockComponent extends React.Component {
         this.radius = Math.floor((this.refs.canvas.width - 40)/ 2);
         this.benchMarks = ["12 AM", "6 AM", "12 PM", "6 PM"];
         this.updateCanvas(false, this.props.isToday);
+
+        this.params = queryString.parse(this.props.location.search);
+        this.solunarAppFlyerLink = "https://bassforecast.onelink.me/5aRm/" + this.params['solunar'];
+        console.log(this.params);
     }
 
     componentWillUnmount() {
@@ -265,7 +271,7 @@ class ClockComponent extends React.Component {
             this.canvasContext.arc(this.centerX, this.centerY, innerCircleRadius, 0, Math.PI * 2, false);
             this.canvasContext.clip();
 
-            //Draw an shadowed outline with a radius slightly greater than the inner circle
+            //Draw an shadowed outline with a this.params['_solunar']radius slightly greater than the inner circle
             this.canvasContext.beginPath();
             this.canvasContext.lineWidth = 2;
             this.canvasContext.shadowColor = "black";
@@ -326,7 +332,7 @@ class ClockComponent extends React.Component {
                     <a
                         style={{ display: this.props.isToday ? "none" : "block"}}
                         className="app__hyperlink playstore"
-                        href="https://bassforecast.onelink.me/5aRm/e6e64dde" 
+                        href={this.solunarAppFlyerLink}
                         target="_blank"
                     >
                         <img
@@ -340,4 +346,4 @@ class ClockComponent extends React.Component {
     }
 }; 
 
-export default ClockComponent;
+export default withRouter(ClockComponent);
