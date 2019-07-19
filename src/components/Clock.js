@@ -321,7 +321,7 @@ class ClockComponent extends React.Component {
                     <a
                         style={{display: this.props.isToday ? "none" : "block"}}
                         className="app__hyperlink appstore"
-                        href="https://bassforecast.onelink.me/5aRm/e6e64dde" 
+                        href={this.solunarAppFlyerLink}
                         target="_blank"
                     >
                         <img
