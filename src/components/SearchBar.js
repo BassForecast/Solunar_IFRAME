@@ -44,7 +44,6 @@ class SearchBar extends React.Component {
     }
 
     onCitySelect(city){
-        
         this.props.dispatch(setCurrentCity(city));
         this.props.dispatch(setCurrentCityBFR({
             bfr: "--",
@@ -66,6 +65,9 @@ class SearchBar extends React.Component {
     }
 
     showDatalist() {
+        this.setState({
+            activeItemIndex : 0
+        });
         if(document.getElementById("citiesBySearch")){
             document.getElementById("citiesBySearch").style.visibility = "visible";
         }
