@@ -1,7 +1,7 @@
 # compiled output
-public/*
-!public/images
-!public/index.html
+# public/*
+# !public/images
+# !public/index.html
 
 # IDE - VSCode
 .vscode/*
